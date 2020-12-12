@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style >
+	.r:hover{
+
+justify-content: center;
+transform: scale(2,2);
+transition: 2s;
+
+
+	}
+body{
+
+background:linear-gradient(blue,red );
+
+height:100vh;
+width:100%;
+}
+.hello{
+
+
+	color: red;border: 6px solid blue;
+}
+</style>
+
+</head>
+<body align="center"><br><br>
+	<img src="images//neha.jpg" class="r" height="200px" width="200px">
+	<br>
+	<input type="password" placeholder="enter the password" ><br>
+	<!-- <button class="show">show
+	</button>
+<button class="hide">hide</button> -->
+
+<span id ="focus" style="font-size: 2em">welcome</span>
+<span id ="blur" style="font-size: 2em">take care</span>
+<ol style="list-style-type: none;">
+	<li>
+nehal
+
+	</li>
+</ol>
+<button id="he">click me</button>
+<button id="his">click</button>
+<center><br>
+<div id="g" >
+
+sk nehal sk nehal sk nehal sk nehal sk  sk nehal sk nehal sk nehal sk nehal sk nehal
+sk nehal sk nehal sk nehal sk nehal sk nehal
+
+</div>
+<script>
+
+$("span").hide();
+	
+$(document).ready(function(){
+
+$("input").focus(function(){
+$('#focus').show().slideUp(2000);
+
+});
+$("input").blur(function()
+	{
+$('#blur').show().slideUp(2000);
+
+});
+
+	
+$("#he").click(function(){
+$("ol").prepend("<li>washim</li>");
+}
+);
+
+$("#his").click(function(){
+
+$("#g").addClass("hello");
+}
+);
+ $("#his").dblclick(function(){
+
+$("#g").queue("hello");
+ 
+
+});
+
+
+
+   }
+     );
+ 
+
+</script>
+
+<table>
+	<thead>
+		<tr>
+			<th>id</th>
+<th>name</th>
+<th>gender</th>
+<th>address</th>
+</tr>
+</thead>
+<tbody>
+	<?php
+$rd= new pdo("mysql:host=localhost",dbname=mydata,"root","");
+$sk=$rd->prepare("select * from admire");
+$sk->execute();
+while($row=$sk->fetch(){
+	?>
+	<tr>
+		<td><?php echo $row['user_id']?></td>
+		<td><?php echo $row['user_name']?></td>
+		<td><?php echo $row['user_gender']?></td>
+		<td><?php echo $row['user_address']?></td>
+
+
+</tr>
+<?php
+{
+
+
+
+	?>
+</tbody>
+	</table>
+</div>
+<script>
+
+$('#mytable').ddtablefilter();
+
+
+	</script>
+
+	<html>

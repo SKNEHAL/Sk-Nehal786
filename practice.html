@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>
+		
+		hell friends check my id and give the mark bro
+	</title>
+</head>
+<body>
+<style>
+{
+
+
+height:300px;
+width: calc(100% );
+}
+
+</style>
+
+
+	<center>
+<h2 style="color: violet";> Animal catagory for branching technique</h2>
+<center>
+<a href="#" class="buttons active" data-filter="cat">Cat  &nbsp &nbsp &nbsp &nbsp &nbsp </a>
+<a href="#" class="buttons"  data-filter="tiger" >Tiger &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+<a href="#"  class="buttons"  data-filter="all">All &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+<a href="#"  class="buttons"  data-filter="parrot">Parrot &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+<div><br><br>
+<img src="images//img1.jpg"  class="image-filter cat"  width="20%" style=" width:28%; height:250px";>
+<img src="images//img2.jpg"  class="image-filter cat" width="24%" style="width:28%; height: 34%";>
+
+<img src="images//img3.jpg"  id="s" class="image-filter parrot" width="24%" style="width:28%; height: 34%;height:300px;
+width: calc(17%); float:left";>
+
+<img src="images//img4.jpg"   class="image-filter parrot"  width="24%" style="width:28%; height: 300px; float:left; margin:1px";>
+
+<img src="images//img5.jpg" class="image-filter  parrot" width="24%" style="width:28%; height: 300px";>
+<img src="images//img6.jpg"  class="image-filter parrot" width="24%" style="width:28%; height: 300px;float:left";>
+
+<img src="images//img7.jpg" class="image-filter parrot" width="24%" style="width:28%; height: 300px; float:left";>
+
+<img src="images//img8.jpg" class="image-filter tiger" width="24%" style="width:28%; height: 300px";>
+
+<img src="images//img9.jpg" class="image-filter tiger" width="24%" style="width:28%; height: 300px";>
+
+<img src="images//img10.jpg"class="image-filter tiger" width="24%" style="width:28%; height: 300px";>
+
+<img src="images//img11.jpg" class="image-filter tiger" width="24%" style="width:28%; height: 300px";>
+
+<img src="images//img1.jpg"  class="image-filter cat" width="24%" style="width:28%; height: 300px";>
+</div>
+
+<script>
+	$(document).ready(function(){
+
+
+
+$('.buttons').click(function(){
+
+             var string =$(this).attr('data-filter');
+
+  if(string=='all'){
+
+  $('.image-filter').show('100');
+   }
+  else
+  {
+  $('.image-filter').not('.'+string).hide('100');
+     $('.image-filter').filter('.'+string).show('100');
+    
+               }
+     });
+
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+ <div style="cursor: pointer";>
+ 	<center>
+
+	<a    class="buttons" data-filter="all">ALL &nbsp &nbsp  &nbsp </a>
+	<a  class="buttons" data-filter="cat">CAT &nbsp &nbsp  &nbsp </a>
+	<a class="buttons" data-filter="parrot">PARROT &nbsp &nbsp  &nbsp </a>
+	<a class="buttons " data-filter="tiger">TIGER &nbsp &nbsp  &nbsp </a>
+<style>
+
+a:hover{
+
+
+	background-color:blue;
+	width: 0px;
+}
+
+</style>
+ </div>
+<div  id="character" align="center"><br>
+	<center>
+	
+	<img src="images//img1.jpg"  class="image-filter cat" style="height:31%";>
+
+
+	
+	<img src="images//img2.jpg" class="image-filter cat"  style="height:31%";>
+		<img src="images//img3.jpg"  class="image-filter parrot"  style="height:31%";>
+		<img src="images//img4.jpg" class="image-filter parrot"  style="height:31%";>
+		
+		<img src="images//img5.jpg" class="image-filter parrot"  style="height:31%;padding: 7px; opacity: 0px";>
+<img src="images//img6.jpg" class="image-filter  parrot"    style="height:31%";>
+<img src="images//img7.jpg"  class="image-filter parrot"      style="height:31%";>
+<img src="images//img8.jpg"  class="image-filter tiger"   style="height:31%";>
+	<img src="images//img9.jpg"  class="image-filter tiger"              style="height:31%";> 
+	<img src  ="images//img10.jpg"  class="image-filter tiger"             style="height:31%;">
+	<img src  ="images//img11.jpg"    class="image-filter tiger"                  style="height:31%; float:left";>
+	<img src  ="images//img7.jpg" class="image-filter parrot"    style="height:31% ";> 
+	<img src  ="images//img9.jpg" class="image-filter tiger"      style="height:31%;float: right; float:top";>
+
+<script>
+
+$(document).ready(function(){
+ 
+$('.buttons').click(function(){
+
+var datavalued=$(this).attr('data-filter');
+
+ if(datavalued=='all')
+{
+
+$('.image-filter').show('1000');
+}
+else
+{
+	$('.image-filter').not('.'+ datavalued).hide('200');
+
+	$('.image-filter').filter('.'+ datavalued).show('200');
+}
+
+});
+});
+
+
+
+</script>
+

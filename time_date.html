@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body >
+	<script>
+
+function rend(){
+
+
+var my=new Date();
+var day =my.getDay();
+var month =my.getMonth();
+var date =my.getDate();
+
+var year=my.getYear();
+if(year<1000){
+year+=1900;
+}
+
+var day =my.getDay();
+var month =my.getMonth();
+var date =my.getDate();
+  
+var  array=new Array("sun","mon","tuesday","wed","thurs","friday","satr");
+var montharray=new Array("jan","feb","mar","apr","may","jum","jul","aug","sept","oct","nov","december");
+
+       var my=document.getElementById("Display");
+
+var currenttime=new Date();
+var h=currenttime.getHours();
+var m=currenttime.getMinutes();
+var s=currenttime.getSeconds();
+if(h==24){
+
+
+
+	h=12;
+
+}
+
+else if(h>12)
+
+
+	// if needed compueter watch so  within the block code immediatelay uncomment 
+// {
+
+// h=12;
+
+	
+// }
+
+if(h<10){
+
+h='0'+h;
+}
+if(m<10){
+
+
+	m='0'+m;
+}
+if(s<10){
+
+	s='0'+s;
+
+}
+
+
+
+
+my.innerText=array[day]+" "+ + date+montharray[month]+year+"***** TIME "+h+":"  +m+ ":" +s;
+
+  var my=document.getElementById("Display");
+
+setTimeout("rend()");
+}
+</script>
+<body onload="rend()";><br>
+
+	<h1 id="Display" style="text-align: center;font-family:cursive;"></h1>
+
+
+
+</body>
+</html>
+

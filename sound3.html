@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style> --> 
+</head>
+<body>
+
+<script >
+  function washim(){
+
+     var  string=new Date();
+        
+             var da=string.getDay();
+
+var mon=string.getMonth();
+var dat= string.getDate();
+var year=string.getYear();
+if(year<1000){
+  year+=1900;
+}
+
+   var arr= new Array("sun","mon","tues","wed","thursday","friday","saturday");
+var montharray= new Array("january","ferbuary","march","april","may","jun","july","august","september","october","november","december");
+
+     
+var k=document.getElementById("hotstar");
+
+    
+
+   var man= new Date();
+     var h=man.getHours();
+var  m=man.getminute();
+
+var s=man.getsecond();
+
+if(h==24){
+
+
+h=0;
+
+}
+
+else if(h>12){
+
+  h=h-12;
+}
+if(h<10){
+  h='0'+h;
+}
+
+if(m<10){
+
+  m='0'+m;
+}
+if(s<10){
+  s='0'+s;
+
+}
+
+    k.innerText=arr[da] +" "+ +dat+montharray[mon]+" "+ +year+""+ h +""+m +"" +s;
+setTimeout("washim()");
+}
+
+</script>
+	<body onload="washim()";>
+   
+<h1 id="hotstar"></h1>
+  </body>
+
+</html>
